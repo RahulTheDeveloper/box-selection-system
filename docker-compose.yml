@@ -9,14 +9,14 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DB_NAME: box_selection_db
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_HOST: db
-      DB_PORT: 5432
+      DB_NAME: ${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
 
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
 
     depends_on:
       - db
@@ -26,9 +26,9 @@ services:
     image: postgres:16
     container_name: box_selection_db
     environment:
-      POSTGRES_DB: box_selection_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
