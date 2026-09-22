@@ -248,6 +248,7 @@ Product rotation/orientation
 
 It does not implement full 3D bin-packing optimization for arbitrary placement of multiple products inside a box.
 
+You can view the automated test runs in the [GitHub Actions](../../actions) section of this repository.
 Testing and Verification
 
 The project has been tested locally using Django's automated test framework.
