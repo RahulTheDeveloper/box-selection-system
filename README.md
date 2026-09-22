@@ -253,4 +253,11 @@ Testing and Verification
 
 The project has been tested locally using Django's automated test framework.
 
-GitHub Actions is also configured to run the tests automatically in a clean environment containing PostgreSQL and Redis.                          
+
+GitHub Actions is also configured to run the tests automatically in a clean environment containing PostgreSQL and Redis.
+
+## GitHub Actions
+
+GitHub Actions automatically runs the Django test suite on pushes and pull requests.
+
+You can view the automated test runs in the [GitHub Actions](../../actions) section of this repository.
